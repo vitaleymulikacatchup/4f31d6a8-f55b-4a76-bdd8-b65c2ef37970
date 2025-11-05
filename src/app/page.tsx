@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
@@ -24,7 +24,7 @@ export default function Home() {
       cardStyle="glass-elevated"
       primaryButtonStyle="shadow"
       secondaryButtonStyle="solid"
-      showBlurBottom={true}
+      showBlurBottom="true"
     >
       <div id="nav" data-section="nav">
         <NavbarStyleApple
@@ -196,8 +196,8 @@ export default function Home() {
               imageSrc: "https://images.pexels.com/photos/15444413/pexels-photo-15444413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Alex Rivera portrait",
               socialLinks: [
-                { icon: "Instagram", url: "https://instagram.com/alexrivera" },
-                { icon: "Coffee", url: "https://linkedin.com/in/alexrivera" }
+                { icon: Instagram, url: "https://instagram.com/alexrivera" },
+                { icon: Coffee, url: "https://linkedin.com/in/alexrivera" }
               ]
             },
             {
@@ -208,8 +208,8 @@ export default function Home() {
               imageSrc: "https://images.pexels.com/photos/4354193/pexels-photo-4354193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Maria Santos portrait",
               socialLinks: [
-                { icon: "Instagram", url: "https://instagram.com/mariasantos" },
-                { icon: "Twitter", url: "https://twitter.com/mariasantos" }
+                { icon: Instagram, url: "https://instagram.com/mariasantos" },
+                { icon: Twitter, url: "https://twitter.com/mariasantos" }
               ]
             }
           ]}
