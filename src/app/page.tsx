@@ -12,6 +12,64 @@ import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterSocial from '@/components/sections/footer/FooterSocial';
 import { Coffee, Star, MessageCircle, TrendingUp, Users, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
 
+const assetMap = [
+  {
+    id: "hero-background",
+    url: "https://images.pexels.com/photos/14134083/pexels-photo-14134083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Modern premium coffee shop interior"
+  },
+  {
+    id: "house-blend",
+    url: "https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Premium espresso coffee"
+  },
+  {
+    id: "cold-brew",
+    url: "https://images.pexels.com/photos/7282737/pexels-photo-7282737.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Cold brew coffee"
+  },
+  {
+    id: "specialty-blend",
+    url: "https://images.pexels.com/photos/669161/pexels-photo-669161.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Specialty coffee blend"
+  },
+  {
+    id: "sarah-portrait",
+    url: "https://images.pexels.com/photos/3801426/pexels-photo-3801426.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Sarah Johnson portrait"
+  },
+  {
+    id: "michael-portrait",
+    url: "https://images.pexels.com/photos/15444413/pexels-photo-15444413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Michael Chen portrait"
+  },
+  {
+    id: "emma-portrait",
+    url: "https://images.pexels.com/photos/3801426/pexels-photo-3801426.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Emma Wilson portrait"
+  },
+  {
+    id: "david-portrait",
+    url: "https://images.pexels.com/photos/13013733/pexels-photo-13013733.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "David Rodriguez portrait"
+  },
+  {
+    id: "alex-portrait",
+    url: "https://images.pexels.com/photos/15444413/pexels-photo-15444413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Alex Rivera portrait"
+  },
+  {
+    id: "maria-portrait",
+    url: "https://images.pexels.com/photos/4354193/pexels-photo-4354193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Maria Santos portrait"
+  },
+  {
+    id: "coffee-beans-bg",
+    url: "https://images.pexels.com/photos/1844687/pexels-photo-1844687.png?auto=compress&cs=tinysrgb&h=650&w=940",
+    alt: "Premium coffee beans background"
+  }
+];
+
 export default function Home() {
   return (
     <ThemeProvider
@@ -49,8 +107,8 @@ export default function Home() {
             { text: "Explore Menu", href: "products" },
             { text: "Visit Us", href: "contact" }
           ]}
-          imageSrc="https://images.pexels.com/photos/14134083/pexels-photo-14134083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-          imageAlt="Modern premium coffee shop interior"
+          imageSrc={assetMap.find(asset => asset.id === "hero-background")?.url || ""}
+          imageAlt={assetMap.find(asset => asset.id === "hero-background")?.alt || "Modern premium coffee shop interior"}
           textPosition="center"
           showBlur={true}
           showDimOverlay={true}
@@ -82,22 +140,22 @@ export default function Home() {
               id: "1",
               name: "House Blend Espresso",
               price: "$4.50",
-              imageSrc: "https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Premium espresso coffee"
+              imageSrc: assetMap.find(asset => asset.id === "house-blend")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "house-blend")?.alt || "Premium espresso coffee"
             },
             {
               id: "2",
               name: "Cold Brew Special",
               price: "$5.25",
-              imageSrc: "https://images.pexels.com/photos/7282737/pexels-photo-7282737.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Cold brew coffee"
+              imageSrc: assetMap.find(asset => asset.id === "cold-brew")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "cold-brew")?.alt || "Cold brew coffee"
             },
             {
               id: "3",
               name: "Artisan Specialty Blend",
               price: "$6.00",
-              imageSrc: "https://images.pexels.com/photos/669161/pexels-photo-669161.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Specialty coffee blend"
+              imageSrc: assetMap.find(asset => asset.id === "specialty-blend")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "specialty-blend")?.alt || "Specialty coffee blend"
             }
           ]}
         />
@@ -116,8 +174,8 @@ export default function Home() {
               role: "Marketing Director",
               company: "Creative Studio",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/3801426/pexels-photo-3801426.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Sarah Johnson portrait"
+              imageSrc: assetMap.find(asset => asset.id === "sarah-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "sarah-portrait")?.alt || "Sarah Johnson portrait"
             },
             {
               id: "2",
@@ -125,8 +183,8 @@ export default function Home() {
               role: "Business Owner",
               company: "Tech Startup",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/15444413/pexels-photo-15444413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Michael Chen portrait"
+              imageSrc: assetMap.find(asset => asset.id === "michael-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "michael-portrait")?.alt || "Michael Chen portrait"
             },
             {
               id: "3",
@@ -134,8 +192,8 @@ export default function Home() {
               role: "Graphic Designer",
               company: "Design Agency",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/3801426/pexels-photo-3801426.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Emma Wilson portrait"
+              imageSrc: assetMap.find(asset => asset.id === "emma-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "emma-portrait")?.alt || "Emma Wilson portrait"
             },
             {
               id: "4",
@@ -143,8 +201,8 @@ export default function Home() {
               role: "Coffee Enthusiast",
               company: "Local Community",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/13013733/pexels-photo-13013733.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "David Rodriguez portrait"
+              imageSrc: assetMap.find(asset => asset.id === "david-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "david-portrait")?.alt || "David Rodriguez portrait"
             }
           ]}
         />
@@ -193,8 +251,8 @@ export default function Home() {
               name: "Alex Rivera",
               role: "Head Barista",
               description: "Coffee expert with 8 years of experience in specialty brewing techniques and latte art mastery.",
-              imageSrc: "https://images.pexels.com/photos/15444413/pexels-photo-15444413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Alex Rivera portrait",
+              imageSrc: assetMap.find(asset => asset.id === "alex-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "alex-portrait")?.alt || "Alex Rivera portrait",
               socialLinks: [
                 { icon: Instagram, url: "https://instagram.com/alexrivera" },
                 { icon: Coffee, url: "https://linkedin.com/in/alexrivera" }
@@ -205,8 +263,8 @@ export default function Home() {
               name: "Maria Santos",
               role: "Coffee Roaster",
               description: "Passionate roaster specializing in single-origin beans and custom blend development for unique flavor profiles.",
-              imageSrc: "https://images.pexels.com/photos/4354193/pexels-photo-4354193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              imageAlt: "Maria Santos portrait",
+              imageSrc: assetMap.find(asset => asset.id === "maria-portrait")?.url || "",
+              imageAlt: assetMap.find(asset => asset.id === "maria-portrait")?.alt || "Maria Santos portrait",
               socialLinks: [
                 { icon: Instagram, url: "https://instagram.com/mariasantos" },
                 { icon: Twitter, url: "https://twitter.com/mariasantos" }
@@ -225,8 +283,8 @@ export default function Home() {
           inputPlaceholder="Enter your email"
           buttonText="Subscribe"
           termsText="By subscribing, you agree to receive updates about our coffee, events, and special offers. Unsubscribe anytime."
-          imageSrc="https://images.pexels.com/photos/1844687/pexels-photo-1844687.png?auto=compress&cs=tinysrgb&h=650&w=940"
-          imageAlt="Premium coffee beans background"
+          imageSrc={assetMap.find(asset => asset.id === "coffee-beans-bg")?.url || ""}
+          imageAlt={assetMap.find(asset => asset.id === "coffee-beans-bg")?.alt || "Premium coffee beans background"}
           mediaPosition="right"
         />
       </div>
